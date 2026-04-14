@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary */
+  --brand-spring-green: #42e07a;
+  --brand-coastal-blue: #087399;
+  --brand-midnight-teal: #003d52;
+  --brand-mint-green: #a7f2c1;
+  /* Secondary */
+  --brand-white: #ffffff;
+  --brand-gray-owl: #d4d5cd;
+  --brand-dolphin-gray: #91918c;
+  --brand-warm-charcoal: #333331;
+
+  --background: var(--brand-white);
+  --foreground: var(--brand-warm-charcoal);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-mulish), ui-sans-serif, system-ui, sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand-spring: #42e07a;
+  --color-brand-coastal: #087399;
+  --color-brand-midnight: #003d52;
+  --color-brand-mint: #a7f2c1;
+  --color-brand-white: #ffffff;
+  --color-brand-gray-owl: #d4d5cd;
+  --color-brand-dolphin: #91918c;
+  --color-brand-charcoal: #333331;
+
+  /* Mulish scale: body 18/26 (+8 leading), subhead +4pt (22/30), headline +18pt over subhead example (44/52) */
+  --text-brand-body: 1.125rem;
+  --text-brand-body--line-height: 1.625rem;
+  --text-brand-subhead: 1.375rem;
+  --text-brand-subhead--line-height: 1.875rem;
+  --text-brand-headline: 2.75rem;
+  --text-brand-headline--line-height: 3.25rem;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Hide scrollbars; keep scrolling (Firefox + WebKit + legacy Edge) */
+html,
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none;
+  background: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
 }
