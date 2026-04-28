@@ -9,6 +9,14 @@ export type CustomerAdminSection = {
 
 export const CUSTOMER_ADMIN_MENU: CustomerAdminSection[] = [
   {
+    title: "Quick Selections",
+    items: ["Summary", "Enter Cash Sales", "Tickets Report", "Buy Page Link", "Download Drawings"],
+  },
+  {
+    title: "Actions",
+    items: ["Enter Cash Sales", "Clean Up Buyer List", "Card Display", "Recurrent Purchasing"],
+  },
+  {
     title: "Reports",
     groups: [
       {
@@ -37,10 +45,6 @@ export const CUSTOMER_ADMIN_MENU: CustomerAdminSection[] = [
         ],
       },
     ],
-  },
-  {
-    title: "Actions",
-    items: ["Enter Cash Sales", "Clean Up Buyer List", "Card Display", "Recurrent Purchasing"],
   },
   {
     title: "Publicise",
