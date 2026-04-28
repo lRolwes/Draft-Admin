@@ -36,8 +36,8 @@ export default function CustomerAdminPage() {
             </h1>
           </div>
 
-          <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
-            <p className="mt-3 text-brand-body font-semibold leading-[var(--text-brand-body--line-height)] text-brand-charcoal">
+          <div className="mt-4 flex flex-wrap items-start justify-between gap-4">
+            <p className="text-brand-body font-semibold leading-[var(--text-brand-body--line-height)] text-brand-charcoal">
               Welcome to your fundraising admin menu.
             </p>
             <div className="flex h-20 w-40 items-center justify-center rounded-md bg-brand-midnight/95 p-3">
